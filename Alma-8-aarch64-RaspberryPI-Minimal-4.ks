@@ -10,11 +10,7 @@ repo --name="instKernP" --baseurl=https://people.centos.org/pgreco/rpi_aarch64_e
 
 %include includes/partitions8.ksi
 %include includes/packages8.ksi
-
-%pre
-
-#End of Pre script for partitions
-%end
+%include includes/precommon8.ksi
 
 %post
 # Mandatory README file
