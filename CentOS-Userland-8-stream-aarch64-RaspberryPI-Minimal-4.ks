@@ -1,16 +1,7 @@
 # Basic setup information
 url --url="http://mirror.centos.org/centos/8/BaseOS/aarch64/os/"
-install
-keyboard us --xlayouts=us --vckeymap=us
 rootpw --plaintext centos
-timezone --isUtc --nontp UTC
-selinux --enforcing
-firewall --enabled --port=22:tcp
-network --bootproto=dhcp --device=link --activate --onboot=on
-services --enabled=sshd,NetworkManager,chronyd
-shutdown
-bootloader --location=mbr
-lang en_US.UTF-8
+%include includes/basecommon8.ksi
 
 # Repositories to use
 repo --name="centos8-stream-baseos"    --baseurl=http://mirror.centos.org/centos/8-stream/BaseOS/aarch64/os/
