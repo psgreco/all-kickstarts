@@ -17,11 +17,6 @@ repo --name="instKernP" --baseurl=https://people.centos.org/pgreco/rpi_aarch64_e
 %end
 
 %post
-# Generating initrd
-export kvr=$(rpm -q --queryformat '%{version}-%{release}' $(rpm -q raspberrypi2-kernel4|tail -n 1))
-#dracut --force /boot/initramfs-$kvr.armv7hl.img $kvr.armv7hl
-
-
 # Mandatory README file
 cat >/root/README << EOF
 == Alma Linux 8 ==
@@ -29,15 +24,6 @@ cat >/root/README << EOF
 If you want to automatically resize your / partition, just type the following (as root user):
 rootfs-expand
 
-EOF
-
-# Enabling chronyd on boot
-systemctl enable chronyd
-
-
-# Specific cmdline.txt files needed for raspberrypi2/3
-cat > /boot/cmdline.txt << EOF
-console=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p3 rootfstype=ext4 elevator=deadline rootwait
 EOF
 
 cat > /boot/config.txt << EOF
@@ -48,13 +34,7 @@ EOF
 # Setting correct yum variable to use raspberrypi kernel repo
 #echo "rpi2" > /etc/dnf/vars/kvariant
 
-# Remove ifcfg-link on pre generated images
-rm -f /etc/sysconfig/network-scripts/ifcfg-link
-
-# Remove machine-id on pre generated images
-rm -f /etc/machine-id
-touch /etc/machine-id
-
 %end
 
+%include includes/postcommon8.ksi
 %include includes/fixcmdline8.ksi
