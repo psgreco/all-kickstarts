@@ -8,12 +8,7 @@ repo --name="centos8-stream-baseos"    --baseurl=http://mirror.centos.org/centos
 repo --name="centos8-stream-appstream" --baseurl=http://mirror.centos.org/centos/8-stream/AppStream/aarch64/os/
 repo --name="instKernP" --baseurl=https://people.centos.org/pgreco/rpi_aarch64_el8_5.10/ --cost=1000
 
-# Disk setup
-clearpart --initlabel --all
-part /boot --asprimary --fstype=vfat --size=300 --label=boot
-part swap --asprimary --fstype=swap --size=512 --label=swap
-part / --asprimary --fstype=ext4 --size=2400 --label=rootfs
-
+%include includes/partitions8.ksi
 %include includes/packages8.ksi
 
 %pre
