@@ -1,0 +1,14 @@
+%post --nochroot --erroronfail
+
+/usr/sbin/blkid
+LOOPPART=$(cat /proc/self/mounts |/usr/bin/grep '^\/dev\/mapper\/loop[0-9]p[0-9] '"$INSTALL_ROOT " | /usr/bin/sed 's/ .*//g')
+echo "Found loop part for PARTUUID $LOOPPART"
+BOOTDEV=$(/usr/sbin/blkid $LOOPPART|grep 'PARTUUID="........-03"'|sed 's/.*PARTUUID/PARTUUID/g;s/ .*//g;s/"//g')
+echo "no chroot selected bootdev=$BOOTDEV"
+if [ -n "$BOOTDEV" ];then
+    cat $INSTALL_ROOT/boot/cmdline.txt
+    echo sed -i "s|root=/dev/mmcblk0p3|root=${BOOTDEV}|g" $INSTALL_ROOT/boot/cmdline.txt
+    sed -i "s|root=/dev/mmcblk0p3|root=${BOOTDEV}|g" $INSTALL_ROOT/boot/cmdline.txt
+fi
+cat $INSTALL_ROOT/boot/cmdline.txt
+%end
