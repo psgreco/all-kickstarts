@@ -23,25 +23,7 @@ part /boot --asprimary --fstype=vfat --size=300 --label=boot
 part swap --asprimary --fstype=swap --size=512 --label=swap
 part / --asprimary --fstype=ext4 --size=2400 --label=rootfs
 
-# Package setup
-%packages
-@core
-chrony
-cloud-utils-growpart
-net-tools
-NetworkManager-wifi
-#raspberrypi-vc-utils
-#raspberrypi2-firmware
-raspberrypi2-kernel4
-#uboot-images-armv7
--caribou*
--gnome-shell-browser-plugin
--java-1.6.0-*
--java-1.7.0-*
--java-11-*
--python*-caribou*
-
-%end
+%include includes/packages8.ksi
 
 %pre
 
