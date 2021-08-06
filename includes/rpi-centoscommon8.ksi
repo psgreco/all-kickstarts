@@ -17,3 +17,4 @@ EOF
 %include includes/rpi-postcommon8.ksi
 %include includes/postcommon8.ksi
 %include includes/rpi-fixcmdline8.ksi
+%include includes/rpi-initramfs8.ksi

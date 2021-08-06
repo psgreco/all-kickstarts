@@ -1,0 +1,9 @@
+%post
+cat >> /boot/config.txt << EOF
+
+include config-kernel.inc
+
+EOF
+rm -f /boot/kernel8.img
+
+%end
