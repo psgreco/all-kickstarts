@@ -26,3 +26,4 @@ echo "rpi2" > /etc/dnf/vars/kvariant
 
 %include includes/postcommon8.ksi
 %include includes/fixcmdline8.ksi
+%include includes/initramfs8.ksi
