@@ -7,3 +7,4 @@ rm -f /etc/machine-id
 touch /etc/machine-id
 
 %end
+%include includes/rootfs-expand.ksi
