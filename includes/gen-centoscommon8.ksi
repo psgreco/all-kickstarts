@@ -1,0 +1,9 @@
+rootpw --plaintext centos
+%include includes/basecommon8.ksi
+%include includes/gen-partitions8.ksi
+%include includes/packages8.ksi
+%include includes/gen-packages8.ksi
+%include includes/precommon8.ksi
+%include includes/centosreadme8.ksi
+%include includes/gen-postcommon8.ksi
+%include includes/postcommon8.ksi

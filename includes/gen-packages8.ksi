@@ -1,0 +1,16 @@
+# Package setup
+%packages
+dracut-config-generic
+kernel
+kernel-core
+grub2-common
+grub2-efi-aa64
+grub2-efi-aa64-modules
+grubby
+efibootmgr
+shim-aa64
+systemd-udev
+uboot-tools
+-dracut-config-rescue
+
+%end

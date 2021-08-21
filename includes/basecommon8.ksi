@@ -6,5 +6,5 @@ firewall --enabled --port=22:tcp
 network --bootproto=dhcp --device=link --activate --onboot=on
 services --enabled=sshd,NetworkManager,chronyd
 shutdown
-bootloader --location=mbr
+bootloader --location=mbr --driveorder=sda
 lang en_US.UTF-8
