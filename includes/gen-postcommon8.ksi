@@ -1,0 +1,36 @@
+%post
+# Setting correct yum variable to use raspberrypi kernel repo
+#echo "generic" > /etc/dnf/vars/kvariant
+
+rpm -e dracut-config-generic
+
+#setup dtb link by running "creating 10-devicetree.install"
+if [ -x /lib/kernel/install.d/10-devicetree.install ];then
+    /lib/kernel/install.d/10-devicetree.install remove
+fi
+
+### Write /etc/sysconfig/kernel
+cat << EOF > /etc/sysconfig/kernel
+# Written by image installer
+# UPDATEDEFAULT specifies if new-kernel-pkg should make new kernels the default
+UPDATEDEFAULT=yes
+
+# DEFAULTKERNEL specifies the default kernel package type
+DEFAULTKERNEL=kernel-core
+EOF
+chmod 644 /etc/sysconfig/kernel
+
+### Write grub defaults, turn off OS probing as it is always wrong for image creation
+cat << EOF > /etc/default/grub
+GRUB_TIMEOUT=5
+GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
+GRUB_DEFAULT=saved
+GRUB_DISABLE_SUBMENU=true
+GRUB_TERMINAL_OUTPUT="console"
+GRUB_CMDLINE_LINUX=""
+GRUB_DISABLE_RECOVERY="true"
+GRUB_DISABLE_OS_PROBER="true"
+GRUB_ENABLE_BLSCFG="false"
+EOF
+chmod 644 /etc/default/grub
+%end
