@@ -1,0 +1,11 @@
+%post
+# Mandatory README file
+cat >/root/README << EOF
+== Alma Linux 8 ==
+
+If you want to automatically resize your / partition, just type the following (as root user):
+rootfs-expand
+
+EOF
+
+%end

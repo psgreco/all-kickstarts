@@ -5,9 +5,6 @@ chrony
 cloud-utils-growpart
 net-tools
 NetworkManager-wifi
-#raspberrypi-vc-utils
-#raspberrypi2-firmware
-raspberrypi2-kernel4
 #uboot-images-armv7
 -java-11-*
 

@@ -1,0 +1,5 @@
+# Basic setup information
+url --url="https://download.rockylinux.org/pub/rocky/8/BaseOS/aarch64/os/"
+# Repositories to use
+repo --name="rocky8-baseos"    --baseurl=https://download.rockylinux.org/pub/rocky/8/BaseOS/aarch64/os/
+repo --name="rocky8-appstream" --baseurl=https://download.rockylinux.org/pub/rocky/8/AppStream/aarch64/os/

@@ -1,0 +1,7 @@
+# Package setup
+%packages
+#raspberrypi-vc-utils
+#raspberrypi2-firmware
+raspberrypi2-kernel4
+
+%end
