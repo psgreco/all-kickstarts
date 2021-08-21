@@ -1,5 +1,5 @@
 # Basic setup information
-url --url="http://mirror.centos.org/centos/8/BaseOS/aarch64/os/"
+url --url="http://mirror.centos.org/centos/8-stream/BaseOS/aarch64/os/"
 %include includes/centoscommon8.ksi
 
 # Repositories to use
