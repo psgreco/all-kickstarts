@@ -5,6 +5,7 @@ chrony
 cloud-utils-growpart
 net-tools
 NetworkManager-wifi
+authselect-compat
 nano
 bash-completion
 #uboot-images-armv7
