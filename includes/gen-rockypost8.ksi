@@ -1,0 +1,7 @@
+%post
+# Generic efi filename for VMs
+mkdir -p /boot/efi/EFI/BOOT
+if [ -f /boot/efi/EFI/rocky/grubaa64.efi ];then
+    cp -f /boot/efi/EFI/rocky/grubaa64.efi /boot/efi/EFI/BOOT/BOOTAA64.EFI
+fi
+%end

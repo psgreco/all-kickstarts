@@ -6,4 +6,5 @@ rootpw --plaintext centos
 %include includes/precommon8.ksi
 %include includes/centosreadme8.ksi
 %include includes/gen-postcommon8.ksi
+%include includes/gen-centospost8.ksi
 %include includes/postcommon8.ksi
