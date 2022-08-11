@@ -1,1 +1,1 @@
-repo --name="instKern" --baseurl=https://people.centos.org/pgreco/gen_aarch64_el8_5.10/ --cost=100 --install
+repo --name="instKern" --baseurl=https://people.centos.org/pgreco/gen_aarch64_el8_5.15/ --cost=100 --install
