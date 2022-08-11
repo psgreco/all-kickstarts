@@ -21,6 +21,7 @@ EOF
 chmod 644 /etc/sysconfig/kernel
 
 ### Write grub defaults, turn off OS probing as it is always wrong for image creation
+echo "### Write grub defaults, turn off OS probing as it is always wrong for image creation"
 cat << EOF > /etc/default/grub
 GRUB_TIMEOUT=5
 GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
