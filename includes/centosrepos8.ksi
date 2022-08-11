@@ -1,5 +1,0 @@
-# Basic setup information
-url --url="http://mirror.centos.org/centos/8/BaseOS/aarch64/os/"
-# Repositories to use
-repo --name="centos8-baseos"    --baseurl=http://mirror.centos.org/centos/8/BaseOS/aarch64/os/
-repo --name="centos8-appstream" --baseurl=http://mirror.centos.org/centos/8/AppStream/aarch64/os/
