@@ -5,15 +5,6 @@ rootpw --plaintext centos
 %include includes/rpi-packages8.ksi
 %include includes/precommon8.ksi
 %include includes/readmecommon.ksi
-
-%post
-cat > /boot/config.txt << EOF
-# CentOS doesn't use any default config options to work,
-# this file is provided as a placeholder for user options
-EOF
-
-%end
-
 %include includes/rpi-postcommon8.ksi
 %include includes/postcommon8.ksi
 %include includes/rpi-fixcmdline8.ksi

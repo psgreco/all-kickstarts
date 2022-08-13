@@ -1,4 +1,15 @@
 %post
+
+. /etc/os-release
+
+cat > /boot/config.txt << EOF
+# $NAME doesn't use any default config options to work,
+# this file is provided as a placeholder for user options
+EOF
+
+%end
+
+%post
 # Setting correct yum variable to use raspberrypi kernel repo
 #echo "rpi2" > /etc/dnf/vars/kvariant
 
