@@ -1,7 +1,12 @@
 %post
+
+. /etc/os-release
+
+VERSION_MAJOR=${VERSION_ID//[^0-9]*/}
+
 # Mandatory README file
 cat >/root/README << EOF
-== Rocky Linux 8 ==
+== $NAME $VERSION_MAJOR ==
 
 If you want to automatically resize your / partition, just type the following (as root user):
 rootfs-expand

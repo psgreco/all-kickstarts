@@ -4,7 +4,7 @@ rootpw --plaintext rocky
 %include includes/packages8.ksi
 %include includes/gen-packages8.ksi
 %include includes/precommon8.ksi
-%include includes/rockyreadme8.ksi
+%include includes/readmecommon.ksi
 %include includes/gen-postcommon8.ksi
 %include includes/gen-rockypost8.ksi
 %include includes/postcommon8.ksi

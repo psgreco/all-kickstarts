@@ -4,7 +4,7 @@ rootpw --plaintext almalinux
 %include includes/packages8.ksi
 %include includes/gen-packages8.ksi
 %include includes/precommon8.ksi
-%include includes/almareadme8.ksi
+%include includes/readmecommon.ksi
 %include includes/gen-postcommon8.ksi
 %include includes/gen-almapost8.ksi
 %include includes/postcommon8.ksi

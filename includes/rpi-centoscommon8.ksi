@@ -4,7 +4,7 @@ rootpw --plaintext centos
 %include includes/packages8.ksi
 %include includes/rpi-packages8.ksi
 %include includes/precommon8.ksi
-%include includes/centosreadme8.ksi
+%include includes/readmecommon.ksi
 
 %post
 cat > /boot/config.txt << EOF
