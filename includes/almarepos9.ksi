@@ -1,0 +1,5 @@
+# Basic setup information
+url --url="https://repo.almalinux.org/almalinux/9/BaseOS/aarch64/os/"
+# Repositories to use
+repo --name="almalinux9-baseos"    --baseurl=https://repo.almalinux.org/almalinux/9/BaseOS/aarch64/os/
+repo --name="almalinux9-appstream" --baseurl=https://repo.almalinux.org/almalinux/9/AppStream/aarch64/os/

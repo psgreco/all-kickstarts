@@ -1,0 +1,8 @@
+%pre
+
+#End of Pre script for partitions
+%end
+
+%post
+rpm --rebuilddb
+%end

@@ -1,0 +1,11 @@
+%include includes/useralma9.ksi
+%include includes/basecommon9.ksi
+%include includes/rpi-partitions9.ksi
+%include includes/packages9.ksi
+%include includes/rpi-packages9.ksi
+%include includes/precommon9.ksi
+%include includes/readmecommon.ksi
+%include includes/rpi-postcommon9.ksi
+%include includes/postcommon9.ksi
+%include includes/rpi-fixcmdline9.ksi
+%include includes/rpi-initramfs9.ksi

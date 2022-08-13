@@ -1,0 +1,11 @@
+%post
+# Generic efi filename for VMs
+mkdir -p /boot/efi/EFI/BOOT
+if [ -d /boot/efi/EFI/centos/ ] && [ -f /boot/efi/EFI/centos/grubaa64.efi ];then
+    for j in grub.cfg grubenv;do
+        mv -f /boot/grub2/${j} /boot/efi/EFI/centos/
+        ln -s ../efi/EFI/centos/${j} /boot/grub2/${j}
+    done
+    cp -f /boot/efi/EFI/centos/grubaa64.efi /boot/efi/EFI/BOOT/BOOTAA64.EFI
+fi
+%end

@@ -10,7 +10,6 @@ grubby
 efibootmgr
 shim-aa64
 systemd-udev
-uboot-tools
 -dracut-config-rescue
 
 %end

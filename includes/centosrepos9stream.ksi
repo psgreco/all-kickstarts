@@ -1,0 +1,5 @@
+# Basic setup information
+url --url="http://mirror.stream.centos.org/9-stream/BaseOS/aarch64/os/"
+# Repositories to use
+repo --name="centos9-stream-baseos"    --baseurl=http://mirror.stream.centos.org/9-stream/BaseOS/aarch64/os/
+repo --name="centos9-stream-appstream" --baseurl=http://mirror.stream.centos.org/9-stream/AppStream/aarch64/os/

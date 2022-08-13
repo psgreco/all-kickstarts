@@ -1,0 +1,1 @@
+repo --name="instKernP" --baseurl=https://people.centos.org/pgreco/rpi_aarch64_el9_5.15/ --cost=1000 --install

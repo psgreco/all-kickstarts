@@ -1,0 +1,10 @@
+%include includes/userrocky9.ksi
+%include includes/basecommon9.ksi
+%include includes/gen-partitions9.ksi
+%include includes/packages9.ksi
+%include includes/gen-packages9.ksi
+%include includes/precommon9.ksi
+%include includes/readmecommon.ksi
+%include includes/gen-postcommon9.ksi
+%include includes/gen-rockypost9.ksi
+%include includes/postcommon9.ksi
