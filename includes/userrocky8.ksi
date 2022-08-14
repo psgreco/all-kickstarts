@@ -1,0 +1,7 @@
+rootpw --plaintext rocky
+
+%post --erroronfail
+/sbin/useradd -c "Rocky Linux default user" -g users -G wheel -m rocky
+echo "rockylinux" | passwd --stdin  rocky
+
+%end

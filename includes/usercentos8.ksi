@@ -1,0 +1,7 @@
+rootpw --plaintext centos
+
+%post --erroronfail
+/sbin/useradd -c "CentOS default user" -g users -G wheel -m centos
+echo "centos" | passwd --stdin  centos
+
+%end

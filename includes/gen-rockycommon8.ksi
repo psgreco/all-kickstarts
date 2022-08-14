@@ -1,4 +1,4 @@
-rootpw --plaintext rocky
+%include includes/userrocky8.ksi
 %include includes/basecommon8.ksi
 %include includes/gen-partitions8.ksi
 %include includes/packages8.ksi

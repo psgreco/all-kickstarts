@@ -1,0 +1,7 @@
+rootpw --plaintext alma
+
+%post --erroronfail
+/sbin/useradd -c "Alma Linux default user" -g users -G wheel -m alma
+echo "almalinux" | passwd --stdin  alma
+
+%end
