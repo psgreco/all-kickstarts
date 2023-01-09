@@ -11,7 +11,7 @@ fi
 dev=\$(echo \$part|sed 's/[0-9]*\$//g')
 devlen=\${#dev}
 num=\${part:\$devlen}
-if [[ "\$dev" =~ ^[0-9]p\$ ]];then
+if [[ "\$dev" =~ [0-9]p\$ ]];then
     dev=\${dev:0:-1}
 fi
 if [ ! -x /usr/bin/growpart ];then
