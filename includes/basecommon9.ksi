@@ -1,4 +1,4 @@
-install
+#install
 keyboard us --xlayouts=us --vckeymap=us
 timezone UTC --utc
 selinux --enforcing
